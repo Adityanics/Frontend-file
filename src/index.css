@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Utility class for a standard Claymorphism card */
+  .clay-card {
+    @apply bg-clay-card rounded-clay shadow-clay-out p-6;
+  }
+  
+  /* Utility class for a standard Claymorphism button */
+  .clay-btn {
+    @apply bg-clay-card rounded-clay-sm shadow-clay-btn text-primary font-medium px-4 py-2 transition-all duration-200 active:shadow-clay-btn-active active:scale-95;
+  }
+
+  .clay-btn-primary {
+    @apply bg-primary text-white shadow-[4px_4px_8px_#b3b6b8,-4px_-4px_8px_#ffffff] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] rounded-clay-sm py-2 px-6 font-medium transition-all duration-200;
+  }
+
+  /* Progress bar internal shadows */
+  .clay-progress-bg {
+    @apply bg-clay-card rounded-full shadow-clay-in overflow-hidden h-3;
+  }
+}
